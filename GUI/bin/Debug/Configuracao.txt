@@ -1,0 +1,4 @@
+SIDI\SQLEXPRESS
+ControleEstoque
+UsuarioSidi
+231619

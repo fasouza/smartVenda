@@ -1,0 +1,14 @@
+B:\SmartVenda-gh-pages\SmartVenda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+B:\SmartVenda-gh-pages\SmartVenda\DAL\bin\Debug\DAL.dll
+B:\SmartVenda-gh-pages\SmartVenda\DAL\bin\Debug\DAL.pdb
+B:\SmartVenda-gh-pages\SmartVenda\DAL\bin\Debug\Modelo.dll
+B:\SmartVenda-gh-pages\SmartVenda\DAL\bin\Debug\Modelo.pdb
+B:\SmartVenda-gh-pages\SmartVenda\DAL\obj\Debug\DAL.dll
+B:\SmartVenda-gh-pages\SmartVenda\DAL\obj\Debug\DAL.pdb
+B:\SmartVenda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+B:\SmartVenda\DAL\bin\Debug\DAL.dll
+B:\SmartVenda\DAL\bin\Debug\DAL.pdb
+B:\SmartVenda\DAL\bin\Debug\Modelo.dll
+B:\SmartVenda\DAL\bin\Debug\Modelo.pdb
+B:\SmartVenda\DAL\obj\Debug\DAL.dll
+B:\SmartVenda\DAL\obj\Debug\DAL.pdb
