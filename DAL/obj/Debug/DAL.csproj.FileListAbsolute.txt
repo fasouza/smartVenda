@@ -12,3 +12,10 @@ B:\smartVenda\DAL\bin\Debug\Modelo.pdb
 B:\smartVenda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 B:\smartVenda\DAL\obj\Debug\DAL.dll
 B:\smartVenda\DAL\obj\Debug\DAL.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\bin\Debug\DAL.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\bin\Debug\DAL.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\bin\Debug\Modelo.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\bin\Debug\Modelo.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\obj\Debug\DAL.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DAL\obj\Debug\DAL.pdb

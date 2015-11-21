@@ -1,4 +1,4 @@
-SIDI\SQLEXPRESS
-Venda
-UsuarioSidi
-231619
+DESKTOP-EF8UKJR
+smartvenda
+sa
+adminsa

@@ -2,3 +2,8 @@ B:\smartVenda\Ferramentas\bin\Debug\Ferramentas.dll
 B:\smartVenda\Ferramentas\bin\Debug\Ferramentas.pdb
 B:\smartVenda\Ferramentas\obj\Debug\Ferramentas.dll
 B:\smartVenda\Ferramentas\obj\Debug\Ferramentas.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\Ferramentas\bin\Debug\Ferramentas.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\Ferramentas\bin\Debug\Ferramentas.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\Ferramentas\obj\Debug\Ferramentas.csprojResolveAssemblyReference.cache
+C:\Users\fasou\Documents\GitHub\smartVenda\Ferramentas\obj\Debug\Ferramentas.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\Ferramentas\obj\Debug\Ferramentas.pdb

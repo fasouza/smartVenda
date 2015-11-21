@@ -7,3 +7,8 @@ B:\smartVenda\Modelo\bin\Debug\Modelo.dll
 B:\smartVenda\Modelo\bin\Debug\Modelo.pdb
 B:\smartVenda\Modelo\obj\Debug\Modelo.dll
 B:\smartVenda\Modelo\obj\Debug\Modelo.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\Modelo\bin\Debug\Modelo.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\Modelo\bin\Debug\Modelo.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\fasou\Documents\GitHub\smartVenda\Modelo\obj\Debug\Modelo.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\Modelo\obj\Debug\Modelo.pdb

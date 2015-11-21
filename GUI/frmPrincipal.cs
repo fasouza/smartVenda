@@ -235,6 +235,13 @@ namespace GUI
             }          
 
         }
+
+        private void contasAPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContasPagar f = new frmContasPagar();
+            f.ShowDialog();
+            f.Dispose();
+        }
         
     }
 }

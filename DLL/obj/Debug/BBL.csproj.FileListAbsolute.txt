@@ -16,3 +16,12 @@ B:\smartVenda\DLL\bin\Debug\Modelo.pdb
 B:\smartVenda\DLL\obj\Debug\BBL.csprojResolveAssemblyReference.cache
 B:\smartVenda\DLL\obj\Debug\DLL.dll
 B:\smartVenda\DLL\obj\Debug\DLL.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\DLL.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\DLL.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\DAL.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\Modelo.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\DAL.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\bin\Debug\Modelo.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\obj\Debug\BBL.csprojResolveAssemblyReference.cache
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\obj\Debug\DLL.dll
+C:\Users\fasou\Documents\GitHub\smartVenda\DLL\obj\Debug\DLL.pdb
