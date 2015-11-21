@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,107 +53,185 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBackupBanco.cs">
+    <Compile Include="1 - Cadastro\frmCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBackupBanco.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroUsuario.Designer.cs">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 - Consulta\frmConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2 - Consulta\frmConsultaUsuario.Designer.cs">
+      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioProdutoPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioProdutoPorCategoria.Designer.cs">
+      <DependentUpon>frmRelatorioProdutoPorCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioCategoria.Designer.cs">
+      <DependentUpon>frmRelatorioCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Relatório\frmListaCategoriaSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Relatório\frmListaCategoriaSubCategoria.Designer.cs">
+      <DependentUpon>frmListaCategoriaSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioProduto.Designer.cs">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Relatório\frmRelatorioSubCategoria.Designer.cs">
+      <DependentUpon>frmRelatorioSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 - Outros\frmBackupBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 - Outros\frmBackupBanco.Designer.cs">
       <DependentUpon>frmBackupBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCategoria.cs">
+    <Compile Include="1 - Cadastro\frmCadastroCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCategoria.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroCategoria.Designer.cs">
       <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCliente.cs">
+    <Compile Include="1 - Cadastro\frmCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCliente.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroCliente.Designer.cs">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.cs">
+    <Compile Include="1 - Cadastro\frmCadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroFornecedor.Designer.cs">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroProduto.cs">
+    <Compile Include="1 - Cadastro\frmCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroProduto.designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroProduto.designer.cs">
       <DependentUpon>frmCadastroProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroSubCategoria.cs">
+    <Compile Include="1 - Cadastro\frmCadastroSubCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroSubCategoria.designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroSubCategoria.designer.cs">
       <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroTipoPagamento.cs">
+    <Compile Include="1 - Cadastro\frmCadastroTipoPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroTipoPagamento.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroTipoPagamento.Designer.cs">
       <DependentUpon>frmCadastroTipoPagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroUnidadeMedida.cs">
+    <Compile Include="1 - Cadastro\frmCadastroUnidadeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroUnidadeMedida.Designer.cs">
+    <Compile Include="1 - Cadastro\frmCadastroUnidadeMedida.Designer.cs">
       <DependentUpon>frmCadastroUnidadeMedida.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracaoBancoDados.cs">
+    <Compile Include="4 - Outros\frmConfiguracaoBancoDados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracaoBancoDados.Designer.cs">
+    <Compile Include="4 - Outros\frmConfiguracaoBancoDados.Designer.cs">
       <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaCategoria.cs">
+    <Compile Include="2 - Consulta\frmConsultaCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaCategoria.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaCategoria.Designer.cs">
       <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaCliente.cs">
+    <Compile Include="2 - Consulta\frmConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaCliente.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaCliente.Designer.cs">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaFornecedor.cs">
+    <Compile Include="2 - Consulta\frmConsultaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaFornecedor.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaFornecedor.Designer.cs">
       <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaProduto.cs">
+    <Compile Include="2 - Consulta\frmConsultaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaProduto.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaProduto.Designer.cs">
       <DependentUpon>frmConsultaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaSubcategoria.cs">
+    <Compile Include="2 - Consulta\frmConsultaSubcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaSubcategoria.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaSubcategoria.Designer.cs">
       <DependentUpon>frmConsultaSubcategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaTipoPagamento.cs">
+    <Compile Include="2 - Consulta\frmConsultaTipoPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaTipoPagamento.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaTipoPagamento.Designer.cs">
       <DependentUpon>frmConsultaTipoPagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaUnidadeMedida.cs">
+    <Compile Include="2 - Consulta\frmConsultaUnidadeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsultaUnidadeMedida.Designer.cs">
+    <Compile Include="2 - Consulta\frmConsultaUnidadeMedida.Designer.cs">
       <DependentUpon>frmConsultaUnidadeMedida.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModeloFormularioCadastro.cs">
+    <Compile Include="1 - Cadastro\frmModeloFormularioCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModeloFormularioCadastro.Designer.cs">
+    <Compile Include="1 - Cadastro\frmModeloFormularioCadastro.Designer.cs">
       <DependentUpon>frmModeloFormularioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5 - Report\ProdutoPorCategoria.cs">
+      <DependentUpon>ProdutoPorCategoria.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="5 - Report\Categoria.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Categoria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="5 - Report\Produto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Produto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="5 - Report\SubCategoria.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubCategoria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="1 - Cadastro\CadastroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 - Cadastro\CadastroVenda.Designer.cs">
+      <DependentUpon>CadastroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -154,56 +241,99 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBackupBanco.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroUsuario.resx">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2 - Consulta\frmConsultaUsuario.resx">
+      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Relatório\frmRelatorioProdutoPorCategoria.resx">
+      <DependentUpon>frmRelatorioProdutoPorCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Relatório\frmRelatorioCategoria.resx">
+      <DependentUpon>frmRelatorioCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Relatório\frmListaCategoriaSubCategoria.resx">
+      <DependentUpon>frmListaCategoriaSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Relatório\frmRelatorioProduto.resx">
+      <DependentUpon>frmRelatorioProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Relatório\frmRelatorioSubCategoria.resx">
+      <DependentUpon>frmRelatorioSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 - Outros\frmBackupBanco.resx">
       <DependentUpon>frmBackupBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroCategoria.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroCategoria.resx">
       <DependentUpon>frmCadastroCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroCliente.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroCliente.resx">
       <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroFornecedor.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroFornecedor.resx">
       <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroProduto.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroProduto.resx">
       <DependentUpon>frmCadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroSubCategoria.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroSubCategoria.resx">
       <DependentUpon>frmCadastroSubCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroTipoPagamento.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroTipoPagamento.resx">
       <DependentUpon>frmCadastroTipoPagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroUnidadeMedida.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroUnidadeMedida.resx">
       <DependentUpon>frmCadastroUnidadeMedida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracaoBancoDados.resx">
+    <EmbeddedResource Include="4 - Outros\frmConfiguracaoBancoDados.resx">
       <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaCategoria.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaCategoria.resx">
       <DependentUpon>frmConsultaCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaCliente.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaCliente.resx">
       <DependentUpon>frmConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaFornecedor.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaFornecedor.resx">
       <DependentUpon>frmConsultaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaProduto.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaProduto.resx">
       <DependentUpon>frmConsultaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaSubcategoria.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaSubcategoria.resx">
       <DependentUpon>frmConsultaSubcategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaTipoPagamento.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaTipoPagamento.resx">
       <DependentUpon>frmConsultaTipoPagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaUnidadeMedida.resx">
+    <EmbeddedResource Include="2 - Consulta\frmConsultaUnidadeMedida.resx">
       <DependentUpon>frmConsultaUnidadeMedida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModeloFormularioCadastro.resx">
+    <EmbeddedResource Include="1 - Cadastro\frmModeloFormularioCadastro.resx">
       <DependentUpon>frmModeloFormularioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5 - Report\ProdutoPorCategoria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProdutoPorCategoria.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5 - Report\Categoria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Categoria.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5 - Report\Produto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Produto.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5 - Report\SubCategoria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubCategoria.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 - Cadastro\CadastroVenda.resx">
+      <DependentUpon>CadastroVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -287,6 +417,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-esqueci-senha-esquerda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smartvenda4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

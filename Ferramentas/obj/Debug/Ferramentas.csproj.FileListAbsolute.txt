@@ -1,4 +1,4 @@
-B:\SmartVenda\Ferramentas\bin\Debug\Ferramentas.dll
-B:\SmartVenda\Ferramentas\bin\Debug\Ferramentas.pdb
-B:\SmartVenda\Ferramentas\obj\Debug\Ferramentas.dll
-B:\SmartVenda\Ferramentas\obj\Debug\Ferramentas.pdb
+B:\smartVenda\Ferramentas\bin\Debug\Ferramentas.dll
+B:\smartVenda\Ferramentas\bin\Debug\Ferramentas.pdb
+B:\smartVenda\Ferramentas\obj\Debug\Ferramentas.dll
+B:\smartVenda\Ferramentas\obj\Debug\Ferramentas.pdb

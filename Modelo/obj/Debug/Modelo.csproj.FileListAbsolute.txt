@@ -3,7 +3,7 @@ B:\SmartVenda-gh-pages\SmartVenda\Modelo\bin\Debug\Modelo.pdb
 B:\SmartVenda-gh-pages\SmartVenda\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
 B:\SmartVenda-gh-pages\SmartVenda\Modelo\obj\Debug\Modelo.dll
 B:\SmartVenda-gh-pages\SmartVenda\Modelo\obj\Debug\Modelo.pdb
-B:\SmartVenda\Modelo\bin\Debug\Modelo.dll
-B:\SmartVenda\Modelo\bin\Debug\Modelo.pdb
-B:\SmartVenda\Modelo\obj\Debug\Modelo.dll
-B:\SmartVenda\Modelo\obj\Debug\Modelo.pdb
+B:\smartVenda\Modelo\bin\Debug\Modelo.dll
+B:\smartVenda\Modelo\bin\Debug\Modelo.pdb
+B:\smartVenda\Modelo\obj\Debug\Modelo.dll
+B:\smartVenda\Modelo\obj\Debug\Modelo.pdb

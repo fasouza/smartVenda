@@ -60,7 +60,7 @@ namespace DAL
         public DataTable Localizar(String valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from categoria where cat_nome like '%" + valor + "%'", conexao.StringConexao);
+            SqlDataAdapter da = new SqlDataAdapter("Select * from categoria where cat_nome like '%" + valor + "%' order by cat_nome", conexao.StringConexao);
             da.Fill(tabela);
             return tabela;
         }

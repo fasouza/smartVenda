@@ -46,6 +46,7 @@
     <Compile Include="BLLSubCategoria.cs" />
     <Compile Include="BLLTipoPagamento.cs" />
     <Compile Include="BLLUnidadeMedida.cs" />
+    <Compile Include="BLLUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

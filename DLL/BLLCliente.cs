@@ -28,12 +28,7 @@ namespace BBL
             {
                 throw new Exception("O CNPJ/CPF é obrigatório");
             }
-
-            if (obj.CliTipo.Trim().Length <= 0)
-            {
-                throw new Exception("O tipo de cliente é obrigatório");
-            }
-
+            
             if (obj.CliCep.Trim().Length <= 0)
             {
                 throw new Exception("O CEP do cliente é obrigatório");

@@ -12,6 +12,8 @@ using Modelo;
 using System.IO;
 using DAL;
 using System.Data.SqlClient;
+using GUI._3___Relatório;
+using GUI._1___Cadastro;
 
 namespace GUI
 {
@@ -110,11 +112,13 @@ namespace GUI
                 conexao.ConnectionString = DadosConexao.StringDeConexao;
                 conexao.Open();
                 conexao.Close();
+
+                
                 
             }
             catch(SqlException errob)
             {
-                MessageBox.Show("Erro ao se conectar no banca de dados\n"+
+                MessageBox.Show(errob+" Erro ao se conectar no banco de dados\n"+
                                 "Acesse as configurações do banco de dados e informe os parâmetros de conexão");
             }
 
@@ -173,9 +177,64 @@ namespace GUI
             f.Dispose();
         }
 
+        private void relatórioDeCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioCategoria f = new frmRelatorioCategoria();
+            f.ShowDialog();
+            f.Dispose();
+
+        }
+
+        private void relatórioDeSubCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaCategoriaSubCategoria f = new frmListaCategoriaSubCategoria();
+            f.ShowDialog();
+            f.Dispose();
+
+        }       
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroUsuario f = new frmCadastroUsuario();
+            f.ShowDialog();
+            f.Dispose();
+
+        }
+
+        private void todosToolStripMenuItem_Click(object sender, EventArgs e)
+        {  
+            frmRelatorioProduto f = new frmRelatorioProduto();
+            f.ShowDialog();
+            f.Dispose();
+
+        }
+
+        private void toolStripMenuItem2_MouseUp(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void porCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioProdutoPorcategoria f = new frmRelatorioProdutoPorcategoria();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                var result = MessageBox.Show(this, "Você tem certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo);
+                if (result != DialogResult.Yes)
+                {
+                    e.Cancel = true;
+                 
+                }
+            }          
+
+        }
         
-
-
-
     }
 }

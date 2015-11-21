@@ -1,4 +1,4 @@
 SIDI\SQLEXPRESS
-ControleEstoque
+Venda
 UsuarioSidi
 231619

@@ -114,57 +114,25 @@ namespace DAL
             {
                 registro.Read();
 
-                modelo.CliCod       = Convert.ToInt32(registro["cli_cod"]);
-                modelo.CliNome      = Convert.ToString(registro["cli_nome"]);
-                modelo.CliCPF_CNPJ  = Convert.ToString(registro["cli_cpfcnpj"]);
-                modelo.CliRG        = Convert.ToString(registro["cli_rgie"]);
-                modelo.CliRSocial   = Convert.ToString(registro["cli_rsocial"]);
-                modelo.CliTipo      = Convert.ToString(registro["cli_tipo"]);
-                modelo.CliCep       = Convert.ToString(registro["Cli_cep"]);
-                modelo.CliEndereco  = Convert.ToString(registro["cli_endereco"]);
-                modelo.CliBairro    = Convert.ToString(registro["cli_bairro"]);
-                modelo.CliFone      = Convert.ToString(registro["cli_fone"]);
-                modelo.CliCel       = Convert.ToString(registro["cli_cel"]);
-                modelo.CliEmail     = Convert.ToString(registro["cli_email"]);
+                modelo.CliCod = Convert.ToInt32(registro["cli_cod"]);
+                modelo.CliNome = Convert.ToString(registro["cli_nome"]);
+                modelo.CliCPF_CNPJ = Convert.ToString(registro["cli_cpfcnpj"]);
+                modelo.CliRG = Convert.ToString(registro["cli_rgie"]);
+                modelo.CliRSocial = Convert.ToString(registro["cli_rsocial"]);
+                modelo.CliTipo = Convert.ToString(registro["cli_tipo"]);
+                modelo.CliCep = Convert.ToString(registro["Cli_cep"]);
+                modelo.CliEndereco = Convert.ToString(registro["cli_endereco"]);
+                modelo.CliBairro = Convert.ToString(registro["cli_bairro"]);
+                modelo.CliFone = Convert.ToString(registro["cli_fone"]);
+                modelo.CliCel = Convert.ToString(registro["cli_cel"]);
+                modelo.CliEmail = Convert.ToString(registro["cli_email"]);
                 modelo.CliEndNumero = Convert.ToString(registro["cli_endnumero"]);
-                modelo.CliCidade    = Convert.ToString(registro["cli_cidade"]);
-                modelo.CliEstado    = Convert.ToString(registro["cli_estado"]);
+                modelo.CliCidade = Convert.ToString(registro["cli_cidade"]);
+                modelo.CliEstado = Convert.ToString(registro["cli_estado"]);
             }
             conexao.Desconectar();
             return modelo;
         }
-
-        public ModeloCliente CarregaModeloCliente(String cpfcnpj)
-        {
-            ModeloCliente modelo = new ModeloCliente();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from cliente where cli_cpfcnpj = @cpfcnpj";
-            cmd.Parameters.AddWithValue("@cpfcnpj", cpfcnpj);
-            conexao.Conectar();
-            SqlDataReader registro = cmd.ExecuteReader();
-            if (registro.HasRows)
-            {
-                registro.Read();
-
-                modelo.CliCod       = Convert.ToInt32(registro["cli_cod"]);
-                modelo.CliNome      = Convert.ToString(registro["cli_nome"]);
-                modelo.CliCPF_CNPJ  = Convert.ToString(registro["cli_cpfcnpj"]);
-                modelo.CliRG        = Convert.ToString(registro["cli_rgie"]);
-                modelo.CliRSocial   = Convert.ToString(registro["cli_rsocial"]);
-                modelo.CliTipo      = Convert.ToString(registro["cli_tipo"]);
-                modelo.CliCep       = Convert.ToString(registro["Cli_cep"]);
-                modelo.CliEndereco  = Convert.ToString(registro["cli_endereco"]);
-                modelo.CliBairro    = Convert.ToString(registro["cli_bairro"]);
-                modelo.CliFone      = Convert.ToString(registro["cli_fone"]);
-                modelo.CliCel       = Convert.ToString(registro["cli_cel"]);
-                modelo.CliEmail     = Convert.ToString(registro["cli_email"]);
-                modelo.CliEndNumero = Convert.ToString(registro["cli_endnumero"]);
-                modelo.CliCidade    = Convert.ToString(registro["cli_cidade"]);
-                modelo.CliEstado    = Convert.ToString(registro["cli_estado"]);
-            }
-            conexao.Desconectar();
-            return modelo;
-        }
+       
     }
 }

@@ -1,0 +1,9 @@
+B:\SmartVenda\DLL\bin\Debug\DLL.dll
+B:\SmartVenda\DLL\bin\Debug\DLL.pdb
+B:\SmartVenda\DLL\bin\Debug\DAL.dll
+B:\SmartVenda\DLL\bin\Debug\Modelo.dll
+B:\SmartVenda\DLL\bin\Debug\DAL.pdb
+B:\SmartVenda\DLL\bin\Debug\Modelo.pdb
+B:\SmartVenda\DLL\obj\Debug\3 - BBL.csprojResolveAssemblyReference.cache
+B:\SmartVenda\DLL\obj\Debug\DLL.dll
+B:\SmartVenda\DLL\obj\Debug\DLL.pdb

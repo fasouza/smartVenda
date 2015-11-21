@@ -43,8 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Categoria";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Categoria";           
             // 
             // txtValor
             // 
@@ -65,7 +64,6 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(578, 351);
             this.dgvDados.TabIndex = 3;
-            this.dgvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellContentClick);
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             // 
             // btnPesquizar

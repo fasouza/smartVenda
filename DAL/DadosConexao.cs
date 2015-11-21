@@ -9,7 +9,7 @@ namespace DAL
     public class DadosConexao
     {
         public static String servidor   = @"SIDI\SQLEXPRESS";
-        public static String banco      = "ControleDeEstoque";
+        public static String banco      = "Venda";
         public static String usuario    = "UsuarioSidi";
         public static String senha      = "231619";
         
