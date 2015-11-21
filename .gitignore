@@ -1,0 +1,15 @@
+DAL/bin/Debug/*
+DAL/bin/Release/*
+DAL/obj/Debug/*
+DLL/bin/Debug/*
+DLL/bin/Release/*
+DLL/obj/Debug/*
+Ferramentas/bin/Debug/*
+Ferramentas/bin/Release/*
+Ferramentas/obj/Debug/*
+GUI/bin/Debug/*
+GUI/bin/Release/*
+GUI/obj/Debug/*
+Modelo/bin/Debug/*
+Modelo/bin/Release/*
+Modelo/obj/Debug/*

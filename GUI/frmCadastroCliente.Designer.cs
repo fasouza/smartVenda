@@ -98,6 +98,7 @@
             this.pnDados.Controls.Add(this.rbnPessoaFísica);
             this.pnDados.Controls.Add(this.txtNome);
             this.pnDados.Controls.Add(this.lbCliente);
+            //this.pnDados.Paint += new System.Windows.Forms.PaintEventHandler(this.pnDados_Paint);
             // 
             // btAlterar
             // 

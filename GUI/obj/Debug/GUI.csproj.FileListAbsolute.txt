@@ -107,3 +107,6 @@ B:\smartVenda\GUI\bin\Debug\Ferramentas.pdb
 B:\smartVenda\GUI\bin\Debug\Modelo.pdb
 B:\smartVenda\GUI\obj\Debug\GUI.exe
 B:\smartVenda\GUI\obj\Debug\GUI.pdb
+C:\Users\fasou\Documents\GitHub\smartVenda\GUI\bin\Debug\GUI.exe.config
+C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.exe
+C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.pdb
