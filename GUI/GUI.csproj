@@ -65,6 +65,12 @@
     <Compile Include="1 - Cadastro\frmContasPagar.designer.cs">
       <DependentUpon>frmContasPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="2 - Consulta\frmConsultaContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2 - Consulta\frmConsultaContasPagar.Designer.cs">
+      <DependentUpon>frmConsultaContasPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="2 - Consulta\frmConsultaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1 - Cadastro\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 - Cadastro\frmContasPagar.resx">
+      <DependentUpon>frmContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2 - Consulta\frmConsultaContasPagar.resx">
+      <DependentUpon>frmConsultaContasPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="2 - Consulta\frmConsultaUsuario.resx">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>

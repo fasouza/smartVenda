@@ -175,8 +175,8 @@
             // 
             this.cbPago.FormattingEnabled = true;
             this.cbPago.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
+            "Pago",
+            "Pendente"});
             this.cbPago.Location = new System.Drawing.Point(393, 130);
             this.cbPago.Name = "cbPago";
             this.cbPago.Size = new System.Drawing.Size(90, 21);

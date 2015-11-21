@@ -81,7 +81,7 @@ namespace GUI
    
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-            frmContasPagar f = new frmContasPagar();
+            frmConsultaContasPagar f = new frmConsultaContasPagar();
             f.ShowDialog();
             f.Dispose();
 
