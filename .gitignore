@@ -1,3 +1,4 @@
+#GitIgnore
 DAL/bin/Debug/*
 DAL/bin/Release/*
 DAL/obj/Debug/*
