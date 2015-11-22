@@ -242,6 +242,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
-        
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroVenda f = new frmCadastroVenda();
+            f.ShowDialog();
+            f.Dispose();
+        }       
     }
 }

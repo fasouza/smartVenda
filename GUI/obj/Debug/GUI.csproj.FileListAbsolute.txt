@@ -152,3 +152,4 @@ C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.Properties.Resource
 C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.frmContasPagar.resources
 C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.frmConsultaContasPagar.resources
+C:\Users\fasou\Documents\GitHub\smartVenda\GUI\obj\Debug\GUI.frmConsultaVenda.resources

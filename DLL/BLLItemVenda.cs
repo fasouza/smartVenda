@@ -1,47 +1,44 @@
 ﻿using DAL;
 using Modelo;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BBL
 {
     public class BLLItemVenda
     {
         private DALConexao conexao;
+
         public BLLItemVenda(DALConexao cx)
         {
             this.conexao = cx;
         }
 
-        public void Incluir(ModeloItemVenda obj)
+        public void Incluir(ModeloItemVenda modelo)
         {
-            if (obj.ItemVendaQtd <= 0)
+            /*if (modelo.CatNome.Trim().Length == 0)//nome categoria obrigatorio
             {
-                throw new Exception("O item da venda é obrigatório");
-            }
+                throw new Exception("O nome da categoria é obrigatório");
+            }*/
+            //modelo.CatNome = modelo.CatNome.ToUpper();
 
-            if (obj.ItemVendaValor <= 0)
-            {
-                throw new Exception("O valor do item da venda é obrigatório");
-            }
-
-            if (obj.VenCod <= 0)
-            {
-                throw new Exception("A venda é obrigatório");
-            }
-
-            if (obj.ProCod <= 0)
-            {
-                throw new Exception("O produto da venda é obrigatporio");
-            }
-
-           
             DALItemVenda DALobj = new DALItemVenda(conexao);
-            DALobj.Incluir(obj);
+            DALobj.Incluir(modelo);
+        }
+
+        public void Alterar(ModeloItemVenda modelo)
+        {
+            /*if (modelo.CatCod <= 0)//menor ou igual a 0
+            {
+                throw new Exception("O código da categoria é obrigatório");
+            }
+            if (modelo.CatNome.Trim().Length == 0)
+            {
+                throw new Exception("O nome da categoria é obrigatório");
+            }*/
+            //modelo.CatNome = modelo.CatNome.ToUpper();
+
+            DALItemVenda DALobj = new DALItemVenda(conexao);
+            DALobj.Alterar(modelo);
         }
 
         public void Excluir(int codigo)
@@ -50,34 +47,7 @@ namespace BBL
             DALobj.Excluir(codigo);
         }
 
-        public void Alterar(ModeloItemVenda obj)
-        {
-            if (obj.ItemVendaQtd <= 0)
-            {
-                throw new Exception("O item da venda é obrigatório");
-            }
-
-            if (obj.ItemVendaValor <= 0)
-            {
-                throw new Exception("O valor do item da venda é obrigatório");
-            }
-
-            if (obj.VenCod <= 0)
-            {
-                throw new Exception("A venda é obrigatório");
-            }
-
-            if (obj.ProCod <= 0)
-            {
-                throw new Exception("O produto da venda é obrigatporio");
-            }
-
-
-            DALItemVenda DALobj = new DALItemVenda(conexao);
-            DALobj.Incluir(obj);
-        }
-
-        public DataTable Localizar(String valor)
+        public DataTable Localizar(int valor)
         {
             DALItemVenda DALobj = new DALItemVenda(conexao);
             return DALobj.Localizar(valor);
@@ -88,6 +58,5 @@ namespace BBL
             DALItemVenda DALobj = new DALItemVenda(conexao);
             return DALobj.CarregaModeloItemVenda(codigo);
         }
-
     }
 }

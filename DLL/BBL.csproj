@@ -43,11 +43,13 @@
     <Compile Include="BLLCliente.cs" />
     <Compile Include="BLLContasPagar.cs" />
     <Compile Include="BLLFornecedor.cs" />
+    <Compile Include="BLLItemVenda.cs" />
     <Compile Include="BLLProduto.cs" />
     <Compile Include="BLLSubCategoria.cs" />
     <Compile Include="BLLTipoPagamento.cs" />
     <Compile Include="BLLUnidadeMedida.cs" />
     <Compile Include="BLLUsuario.cs" />
+    <Compile Include="BLLVenda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

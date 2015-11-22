@@ -9,97 +9,60 @@ using System.Threading.Tasks;
 
 namespace BBL
 {
-   public class BLLVenda
+    public class BLLVenda
     {
         private DALConexao conexao;
+
         public BLLVenda(DALConexao cx)
         {
             this.conexao = cx;
         }
 
-        public void Incluir(ModeloVenda obj)
+        //metodo incluir
+        public void Incluir(ModeloVenda modelo)
         {
-            if (obj.VenData.ToString() == "")
+            /*if (modelo.CatNome.Trim().Length == 0)//nome categoria obrigatorio
             {
-                throw new Exception("A data da venda é obrigatória");
-            }
+                throw new Exception("O nome da categoria é obrigatório");
+            }*/
+            //modelo.CatNome = modelo.CatNome.ToUpper();
 
-            if (obj.VenNfiscal < 0)
-            {
-                throw new Exception("O número de nota fiscal é obrigatório");
-            }
-
-            if (obj.VenTotal <= 0)
-            {
-                throw new Exception("O valor da venda é obrigatório");
-            }
-
-           if (obj.VenStatus.ToString().Length < 0)
-            {
-                throw new Exception("O status da venda é obrigatório");
-            }
-
-            if (obj.CliCod <= 0)
-            {
-                throw new Exception("O cliente da venda é obrigatório");
-            }
-
-            if (obj.TpaCod < 0)
-            {
-                throw new Exception("O tipo de pagamento é obrigatório");
-            }
-            DALVenda DALobj = new DALVenda(conexao);
-            DALobj.Incluir(obj);
+            DALVenda DALobj = new DALVenda(conexao); //utiliza objeto de conexao
+            DALobj.Incluir(modelo);
         }
 
+        //metodo alterar
+        public void Alterar(ModeloVenda modelo)
+        {
+            /*if (modelo.CatCod <= 0)//menor ou igual a 0
+            {
+                throw new Exception("O código da categoria é obrigatório");
+            }
+            if (modelo.CatNome.Trim().Length == 0)
+            {
+                throw new Exception("O nome da categoria é obrigatório");
+            }*/
+            //modelo.CatNome = modelo.CatNome.ToUpper();
+
+            DALVenda DALobj = new DALVenda(conexao);
+            DALobj.Alterar(modelo);
+        }
+
+        //metodo exclir
         public void Excluir(int codigo)
         {
             DALVenda DALobj = new DALVenda(conexao);
             DALobj.Excluir(codigo);
         }
 
-        public void Alterar(ModeloVenda obj)
-        {
-            if (obj.VenData.ToString() == "")
-            {
-                throw new Exception("A data da venda é obrigatória");
-            }
-
-            if (obj.VenNfiscal < 0)
-            {
-                throw new Exception("O número de nota fiscal é obrigatório");
-            }
-
-            if (obj.VenTotal <= 0)
-            {
-                throw new Exception("O valor da venda é obrigatório");
-            }
-
-            if (obj.VenStatus.ToString().Length < 0)
-            {
-                throw new Exception("O status da venda é obrigatório");
-            }
-
-            if (obj.CliCod <= 0)
-            {
-                throw new Exception("O cliente da venda é obrigatório");
-            }
-
-            if (obj.TpaCod < 0)
-            {
-                throw new Exception("O tipo de pagamento é obrigatório");
-            }
-
-            DALVenda DALobj = new DALVenda(conexao);
-            DALobj.Alterar(obj);
-        }
-
-        public DataTable Localizar(String valor)
+        //metodo localizar
+        public DataTable Localizar(string cliente)
         {
             DALVenda DALobj = new DALVenda(conexao);
-            return DALobj.Localizar(valor);
+            return DALobj.Localizar(cliente);
         }
 
+        //metodo carrega categoria
         public ModeloVenda CarregaModeloVenda(int codigo)
         {
             DALVenda DALobj = new DALVenda(conexao);

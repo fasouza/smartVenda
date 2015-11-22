@@ -77,6 +77,12 @@
     <Compile Include="2 - Consulta\frmConsultaUsuario.Designer.cs">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="2 - Consulta\frmConsultaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2 - Consulta\frmConsultaVenda.Designer.cs">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="3 - Relatório\frmRelatorioProdutoPorCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="2 - Consulta\frmConsultaUsuario.resx">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2 - Consulta\frmConsultaVenda.resx">
+      <DependentUpon>frmConsultaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3 - Relatório\frmRelatorioProdutoPorCategoria.resx">
       <DependentUpon>frmRelatorioProdutoPorCategoria.cs</DependentUpon>

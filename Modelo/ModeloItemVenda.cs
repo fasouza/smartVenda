@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Modelo
 {
@@ -11,61 +8,105 @@ namespace Modelo
         public ModeloItemVenda()
         {
             this.ItemVendaCod = 0;
-            this.ItemVendaQtd = 0;
+            this.ItemVendaQtde = 0;
             this.ItemVendaValor = 0;
             this.VenCod = 0;
             this.ProCod = 0;
-
         }
 
-
-        public ModeloItemVenda(int itemvenda_cod, float itemvenda_qtd, decimal itemvenda_valor, int ven_cod, int pro_cod)
+        public ModeloItemVenda(int itemvendacod, double itemvendaqtde, double itemvendavalor, int vencod, int procod)
         {
-            this.ItemVendaCod = itemvenda_cod;
-            this.ItemVendaQtd = itemvenda_qtd;
-            this.ItemVendaValor = itemvenda_valor;
-            this.VenCod = ven_cod;
-            this.ProCod = pro_cod;
-
+            this.ItemVendaCod = itemvendacod;
+            this.ItemVendaQtde = itemvendaqtde;
+            this.ItemVendaValor = itemvendavalor;
+            this.VenCod = vencod;
+            this.ProCod = procod;
         }
 
         private int itemvenda_cod;
-
         public int ItemVendaCod
         {
-            get { return itemvenda_cod; }
-            set { itemvenda_cod = value; }
+            get
+            {
+                return this.itemvenda_cod;
+            }
+            set
+            {
+                this.itemvenda_cod = value;
+            }
         }
-        private float itemvenda_qtd;
 
-        public float ItemVendaQtd
+        private double itemvenda_qtde;
+        public double ItemVendaQtde
         {
-            get { return itemvenda_qtd; }
-            set { itemvenda_qtd = value; }
+            get
+            {
+                return this.itemvenda_qtde;
+            }
+            set
+            {
+                this.itemvenda_qtde = value;
+            }
         }
-        private decimal itemvenda_valor;
 
-        public decimal ItemVendaValor
+        private double itemvenda_valor;
+        public double ItemVendaValor
         {
-            get { return itemvenda_valor; }
-            set { itemvenda_valor = value; }
+            get
+            {
+                return this.itemvenda_valor;
+            }
+            set
+            {
+                this.itemvenda_valor = value;
+            }
         }
+
         private int ven_cod;
-
         public int VenCod
         {
-            get { return ven_cod; }
-            set { ven_cod = value; }
+            get
+            {
+                return this.ven_cod;
+            }
+            set
+            {
+                this.ven_cod = value;
+            }
         }
-        private int pro_cod;
 
+        private int pro_cod;
         public int ProCod
         {
-            get { return pro_cod; }
-            set { pro_cod = value; }
+            get
+            {
+                return this.pro_cod;
+            }
+            set
+            {
+                this.pro_cod = value;
+            }
         }
 
+        private string produto;
+        public string ItemVendaProduto
+        {
+            get
+            {
+                return this.produto;
+            }
+            set
+            {
+                this.produto = value;
+            }
+        }
 
-
+        public string ItemVendaValorString
+        {
+            get
+            {
+                return "R$ " + String.Format(CultureInfo.InvariantCulture, "{0:0.00}", this.itemvenda_valor);
+            }
+        }
     }
 }
