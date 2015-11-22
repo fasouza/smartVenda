@@ -248,6 +248,13 @@ namespace GUI
             frmCadastroVenda f = new frmCadastroVenda();
             f.ShowDialog();
             f.Dispose();
+        }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmContasReceber f = new frmContasReceber();
+            f.ShowDialog();
+            f.Dispose();
         }       
     }
 }

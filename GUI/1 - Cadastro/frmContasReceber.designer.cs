@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmContasPagar
+    partial class frmContasReceber
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
             this.lblPagamento = new System.Windows.Forms.Label();
             this.lblVencimento = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.lblFornecedor = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.cbPago = new System.Windows.Forms.ComboBox();
             this.lblPago = new System.Windows.Forms.Label();
             this.txtVencimento = new System.Windows.Forms.DateTimePicker();
             this.txtPagamento = new System.Windows.Forms.DateTimePicker();
             this.btnAddFor = new System.Windows.Forms.Button();
-            this.cbFornecedor = new System.Windows.Forms.ComboBox();
+            this.cbCliente = new System.Windows.Forms.ComboBox();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
             this.SuspendLayout();
@@ -50,18 +48,16 @@
             // 
             this.pnDados.Controls.Add(this.btnAddFor);
             this.pnDados.Controls.Add(this.txtPagamento);
-            this.pnDados.Controls.Add(this.cbFornecedor);
+            this.pnDados.Controls.Add(this.cbCliente);
             this.pnDados.Controls.Add(this.txtVencimento);
             this.pnDados.Controls.Add(this.lblPago);
             this.pnDados.Controls.Add(this.cbPago);
-            this.pnDados.Controls.Add(this.lblFornecedor);
+            this.pnDados.Controls.Add(this.lblCliente);
             this.pnDados.Controls.Add(this.lblValor);
             this.pnDados.Controls.Add(this.txtValor);
             this.pnDados.Controls.Add(this.lblVencimento);
             this.pnDados.Controls.Add(this.lblPagamento);
-            this.pnDados.Controls.Add(this.lblDescricao);
             this.pnDados.Controls.Add(this.txtCodigo);
-            this.pnDados.Controls.Add(this.txtDescricao);
             // 
             // btAlterar
             // 
@@ -87,13 +83,6 @@
             // 
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Location = new System.Drawing.Point(35, 73);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(392, 20);
-            this.txtDescricao.TabIndex = 4;
-            // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(35, 27);
@@ -102,20 +91,10 @@
             this.txtCodigo.TabIndex = 5;
             this.txtCodigo.Visible = false;
             // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(32, 57);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 6;
-            this.lblDescricao.Text = "Descrição";
-            this.lblDescricao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // lblPagamento
             // 
             this.lblPagamento.AutoSize = true;
-            this.lblPagamento.Location = new System.Drawing.Point(273, 111);
+            this.lblPagamento.Location = new System.Drawing.Point(282, 111);
             this.lblPagamento.Name = "lblPagamento";
             this.lblPagamento.Size = new System.Drawing.Size(61, 13);
             this.lblPagamento.TabIndex = 10;
@@ -134,7 +113,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(433, 73);
+            this.txtValor.Location = new System.Drawing.Point(336, 73);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(78, 20);
             this.txtValor.TabIndex = 12;
@@ -143,22 +122,22 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(430, 57);
+            this.lblValor.Location = new System.Drawing.Point(333, 57);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(31, 13);
             this.lblValor.TabIndex = 13;
             this.lblValor.Text = "Valor";
             this.lblValor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblFornecedor
+            // lblCliente
             // 
-            this.lblFornecedor.AutoSize = true;
-            this.lblFornecedor.Location = new System.Drawing.Point(32, 168);
-            this.lblFornecedor.Name = "lblFornecedor";
-            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
-            this.lblFornecedor.TabIndex = 15;
-            this.lblFornecedor.Text = "Fornecedor";
-            this.lblFornecedor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(32, 57);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
+            this.lblCliente.TabIndex = 15;
+            this.lblCliente.Text = "Cliente";
+            this.lblCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // cbPago
             // 
@@ -166,7 +145,7 @@
             this.cbPago.Items.AddRange(new object[] {
             "Pago",
             "Pendente"});
-            this.cbPago.Location = new System.Drawing.Point(413, 183);
+            this.cbPago.Location = new System.Drawing.Point(422, 73);
             this.cbPago.Name = "cbPago";
             this.cbPago.Size = new System.Drawing.Size(98, 21);
             this.cbPago.TabIndex = 18;
@@ -174,7 +153,7 @@
             // lblPago
             // 
             this.lblPago.AutoSize = true;
-            this.lblPago.Location = new System.Drawing.Point(410, 167);
+            this.lblPago.Location = new System.Drawing.Point(419, 56);
             this.lblPago.Name = "lblPago";
             this.lblPago.Size = new System.Drawing.Size(37, 13);
             this.lblPago.TabIndex = 19;
@@ -190,14 +169,14 @@
             // 
             // txtPagamento
             // 
-            this.txtPagamento.Location = new System.Drawing.Point(276, 131);
+            this.txtPagamento.Location = new System.Drawing.Point(285, 131);
             this.txtPagamento.Name = "txtPagamento";
             this.txtPagamento.Size = new System.Drawing.Size(235, 20);
             this.txtPagamento.TabIndex = 21;
             // 
             // btnAddFor
             // 
-            this.btnAddFor.Location = new System.Drawing.Point(379, 183);
+            this.btnAddFor.Location = new System.Drawing.Point(302, 73);
             this.btnAddFor.Name = "btnAddFor";
             this.btnAddFor.Size = new System.Drawing.Size(28, 23);
             this.btnAddFor.TabIndex = 24;
@@ -205,22 +184,22 @@
             this.btnAddFor.UseVisualStyleBackColor = true;
             this.btnAddFor.Click += new System.EventHandler(this.btnAddCat_Click);
             // 
-            // cbFornecedor
+            // cbCliente
             // 
-            this.cbFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFornecedor.FormattingEnabled = true;
-            this.cbFornecedor.Location = new System.Drawing.Point(35, 183);
-            this.cbFornecedor.Margin = new System.Windows.Forms.Padding(2);
-            this.cbFornecedor.Name = "cbFornecedor";
-            this.cbFornecedor.Size = new System.Drawing.Size(339, 21);
-            this.cbFornecedor.TabIndex = 23;
+            this.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCliente.FormattingEnabled = true;
+            this.cbCliente.Location = new System.Drawing.Point(35, 72);
+            this.cbCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCliente.Name = "cbCliente";
+            this.cbCliente.Size = new System.Drawing.Size(262, 21);
+            this.cbCliente.TabIndex = 23;
             // 
-            // frmContasPagar
+            // frmContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(634, 461);
-            this.Name = "frmContasPagar";
-            this.Text = "Cadastro de Contas a Pagar";
+            this.Name = "frmContasReceber";
+            this.Text = "Cadastro de Contas a Receber";
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);
@@ -230,19 +209,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblVencimento;
         private System.Windows.Forms.Label lblPagamento;
-        private System.Windows.Forms.Label lblFornecedor;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblPago;
         private System.Windows.Forms.ComboBox cbPago;
         private System.Windows.Forms.DateTimePicker txtPagamento;
         private System.Windows.Forms.DateTimePicker txtVencimento;
         private System.Windows.Forms.Button btnAddFor;
-        private System.Windows.Forms.ComboBox cbFornecedor;
+        private System.Windows.Forms.ComboBox cbCliente;
        }
 }

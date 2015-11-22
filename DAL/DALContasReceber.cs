@@ -10,28 +10,27 @@ using System.Threading.Tasks;
 namespace DAL
 {
 
-       public class DALContasPagar
+       public class DALContasReceber
     {
         private DALConexao conexao;
 
-        public DALContasPagar(DALConexao cx)
+        public DALContasReceber(DALConexao cx)
         {
             this.conexao = cx;
         }
 
-        public void Incluir(ModeloContasPagar modelo)
+        public void Incluir(ModeloContasReceber modelo)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "insert into conta_apagar (descricao,data_vencimento,data_pagamento,status,valor,for_cod) values"+
-                              "(@descricao,@vencimento,@pagamento,@status,@valor,@fornecedor); select @@IDENTITY;";
+            cmd.CommandText = "insert into conta_areceber (data_vencimento,data_pagamento,status,valor,cli_cod) values"+
+                              "(@vencimento,@pagamento,@status,@valor,@cliente); select @@IDENTITY;";
 
-            cmd.Parameters.AddWithValue("@descricao", modelo.CPDescricao);
             cmd.Parameters.AddWithValue("@vencimento", modelo.CPVencimento);
             cmd.Parameters.AddWithValue("@pagamento", modelo.CPPagamento);
             cmd.Parameters.AddWithValue("@status", modelo.CPStatus);
             cmd.Parameters.AddWithValue("@valor", modelo.CPValor);
-            cmd.Parameters.AddWithValue("@fornecedor", modelo.CPFornecedor);
+            cmd.Parameters.AddWithValue("@cliente", modelo.CPCliente);
 
 
             conexao.Conectar();
@@ -43,21 +42,24 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "delete from conta_apagar where apagar_cod = @codigo";
+            cmd.CommandText = "delete from conta_areceber where areceber_cod = @codigo";
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             cmd.ExecuteNonQuery();
             conexao.Desconectar();
         }
 
-        public void Alterar(ModeloContasPagar modelo)
+        public void Alterar(ModeloContasReceber modelo)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "UPDATE conta_apagar SET descricao = (@descricao), data_vencimento = (@vencimento), data_pagamento = (@pagamento), status = (@status), valor =(@valor) where apagar_cod = (@codigo)";
+            cmd.CommandText = "UPDATE conta_areceber SET  data_vencimento = (@vencimento), data_pagamento = (@pagamento), status = (@status), valor =(@valor) where areceber_cod = (@codigo)";
 
-            cmd.Parameters.AddWithValue("@descricao", modelo.CPDescricao);
-            conexao.Conectar();
+            cmd.Parameters.AddWithValue("@vencimento", modelo.CPVencimento);
+            cmd.Parameters.AddWithValue("@pagamento", modelo.CPPagamento);
+            cmd.Parameters.AddWithValue("@status", modelo.CPStatus);
+            cmd.Parameters.AddWithValue("@valor", modelo.CPValor);
+            cmd.Parameters.AddWithValue("@cliente", modelo.CPCliente); conexao.Conectar();
             cmd.ExecuteNonQuery();
             conexao.Desconectar();
         }
@@ -65,19 +67,19 @@ namespace DAL
         public DataTable Localizar(String valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select apagar_cod,descricao, data_vencimento,for_cod from conta_apagar where status !=  'pago' and descricao like '%" + valor + "%'  ", conexao.StringConexao);
+            SqlDataAdapter da = new SqlDataAdapter("Select areceber_cod, data_vencimento,cli_cod from conta_areceber where status !=  'pago' and descricao like '%" + valor + "%'  ", conexao.StringConexao);
             da.Fill(tabela);
             return tabela;
 
 
         }
 
-        public ModeloContasPagar CarregaModeloContasPagar(int codigo)
+        public ModeloContasReceber CarregaModeloContasReceber(int codigo)
         {
-            ModeloContasPagar modelo = new ModeloContasPagar();
+            ModeloContasReceber modelo = new ModeloContasReceber();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from conta_apagar where cli_cod =" + codigo.ToString();
+            cmd.CommandText = "select * from conta_areceber where cli_cod =" + codigo.ToString();
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -85,26 +87,26 @@ namespace DAL
             {
                 registro.Read();
 
-                modelo.CPCod       = Convert.ToInt32(registro["apagar_cod"]);
+                modelo.CPCod       = Convert.ToInt32(registro["areceber_cod"]);
                 modelo.CPDescricao      = Convert.ToString(registro["descricao"]);
             }
             conexao.Desconectar();
             return modelo;
         }
 
-        public ModeloContasPagar CarregaModeloContasPagar(String cpfcnpj)
+        public ModeloContasReceber CarregaModeloContasReceber(String cpfcnpj)
         {
-            ModeloContasPagar modelo = new ModeloContasPagar();
+            ModeloContasReceber modelo = new ModeloContasReceber();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from conta_apagar where cli_cpfcnpj = @cpfcnpj";
+            cmd.CommandText = "select * from conta_areceber where cli_cpfcnpj = @cpfcnpj";
             cmd.Parameters.AddWithValue("@cpfcnpj", cpfcnpj);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
                 registro.Read();
-                modelo.CPCod = Convert.ToInt32(registro["apagar_cod"]);
+                modelo.CPCod = Convert.ToInt32(registro["areceber_cod"]);
                 modelo.CPDescricao = Convert.ToString(registro["descricao"]);
             }
             conexao.Desconectar();

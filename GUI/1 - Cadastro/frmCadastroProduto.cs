@@ -415,12 +415,6 @@ namespace GUI
             {
                 //MessageBox.Show("Cadastre uma categoria");
             }
-        }
-
-       
-
-       
-
-       
+        } 
     }
 }

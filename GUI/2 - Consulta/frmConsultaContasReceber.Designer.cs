@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmConsultaContasPagar
+    partial class frmConsultaContasReceber
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaContasPagar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaContasReceber));
             this.dgvDados = new System.Windows.Forms.DataGridView();
             this.btnPesquizar = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
@@ -71,11 +71,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Conta";
+            this.label1.Text = "Produto";
             // 
-            // frmConsultaContasPagar
+            // frmConsultaContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,10 +84,10 @@
             this.Controls.Add(this.btnPesquizar);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label1);
-            this.Name = "frmConsultaContasPagar";
+            this.Name = "frmConsultaContasReceber";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultaContasPagar";
-            this.Load += new System.EventHandler(this.frmConsultaContasPagar_Load);
+            this.Text = "frmConsultaContasReceber";
+//            this.Load += new System.EventHandler(this.frmConsultaContasReceber_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -12,23 +12,22 @@ using BLL;
 
 namespace GUI
 {
-    public partial class frmContasPagar : GUI.frmModeloFormularioCadastro
+    public partial class frmContasReceber : GUI.frmModeloFormularioCadastro
     {
         public void LimpaTela()
         {
-            txtDescricao.Clear();
             txtValor.Clear();
            
         }
 
-        public frmContasPagar()
+        public frmContasReceber()
         {
             InitializeComponent();
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BLLFornecedor bll = new BLLFornecedor(cx);
-            cbFornecedor.DataSource = bll.Localizar("");
-            cbFornecedor.DisplayMember = "for_nome";
-            cbFornecedor.ValueMember = "for_cod";
+            BLLCliente bll = new BLLCliente(cx);
+            cbCliente.DataSource = bll.Localizar("");
+            cbCliente.DisplayMember = "cli_nome";
+            cbCliente.ValueMember = "cli_cod";
         }
        
         private void btInserir_Click(object sender, EventArgs e)
@@ -50,17 +49,16 @@ namespace GUI
             {
                
                 //leitura dos dados
-                ModeloContasPagar modelo = new ModeloContasPagar();
-                modelo.CPDescricao      = txtDescricao.Text;
+                ModeloContasReceber modelo = new ModeloContasReceber();
                 modelo.CPVencimento = Convert.ToDateTime(txtVencimento.Text);
                 modelo.CPPagamento = Convert.ToDateTime(txtPagamento.Text);
                 modelo.CPStatus = cbPago.Text;
                 modelo.CPValor = Convert.ToDouble(txtValor.Text);
-                modelo.CPFornecedor = Convert.ToInt32(cbFornecedor.SelectedValue); 
+                modelo.CPCliente = Convert.ToInt32(cbCliente.SelectedValue); 
 
                 //obj para gravar os dados no banco
                 DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-                BLLContasPagar bll = new BLLContasPagar(cx);
+                BLLContasReceber bll = new BLLContasReceber(cx);
 
                 if (this.operacao == "inserir")
                 {
@@ -84,32 +82,32 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
-        private void frmContasPagar_Load(object sender, EventArgs e)
+        private void frmContasReceber_Load(object sender, EventArgs e)
         {
             this.alteraBotoes(1);
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BLLFornecedor bll = new BLLFornecedor(cx);
-            cbFornecedor.DataSource = bll.Localizar("");
-            cbFornecedor.DisplayMember = "for_nome";
-            cbFornecedor.ValueMember = "for_cod";
+            BLLCliente bll = new BLLCliente(cx);
+            cbCliente.DataSource = bll.Localizar("");
+            cbCliente.DisplayMember = "cli_nome";
+            cbCliente.ValueMember = "cli_cod";
       
         }
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaContasPagar f = new frmConsultaContasPagar();
+            frmConsultaContasReceber f = new frmConsultaContasReceber();
             f.ShowDialog();
             f.Dispose();
 
             if (f.codigo != 0)
             {
                 DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-                BLLContasPagar bll = new BLLContasPagar(cx);
-                ModeloContasPagar modelo = bll.CarregaModeloContasPagar(f.codigo);
+                BLLContasReceber bll = new BLLContasReceber(cx);
+                ModeloContasReceber modelo = bll.CarregaModeloContasReceber(f.codigo);
 
 
                 //txtCodigo.Text = modelo.CPCod.ToString();
-                txtDescricao.Text = modelo.CPDescricao;
+              //  txtDescricao.Text = modelo.CPDescricao;
 
                 this.alteraBotoes(3);
             }
@@ -135,7 +133,7 @@ namespace GUI
                 if (d.ToString() == "Yes")
                 {
                     DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-                    BLLContasPagar bll = new BLLContasPagar(cx);
+                    BLLContasReceber bll = new BLLContasReceber(cx);
                     bll.Excluir(Convert.ToInt32(txtCodigo.Text));
                     this.LimpaTela();
                     this.alteraBotoes(1);
@@ -151,15 +149,15 @@ namespace GUI
 
         private void btnAddCat_Click(object sender, EventArgs e)
         {
-            frmCadastroFornecedor f = new frmCadastroFornecedor();
+            frmCadastroCliente f = new frmCadastroCliente();
             f.ShowDialog();
             f.Dispose();
 
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BLLFornecedor bll = new BLLFornecedor(cx);
-            cbFornecedor.DataSource = bll.Localizar("");
-            cbFornecedor.DisplayMember = "for_nome";
-            cbFornecedor.ValueMember = "for_cod";
+            BLLCliente bll = new BLLCliente(cx);
+            cbCliente.DataSource = bll.Localizar("");
+            cbCliente.DisplayMember = "cli_nome";
+            cbCliente.ValueMember = "cli_cod";
         }          
     }
 }

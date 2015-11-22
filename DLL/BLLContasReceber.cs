@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace BBL
 {
-    public class BLLContasPagar
+    public class BLLContasReceber
     {
         private DALConexao conexao;
-        public BLLContasPagar(DALConexao cx)
+        public BLLContasReceber(DALConexao cx)
         {
             this.conexao = cx;
         }
 
-        public void Incluir(ModeloContasPagar obj)
+        public void Incluir(ModeloContasReceber obj)
         {
             if (obj.CPDescricao.Trim().Length == 0)
             {
@@ -27,17 +27,17 @@ namespace BBL
             {
                 throw new Exception("Status é obrigatorio");
             } 
-            DALContasPagar DALobj = new DALContasPagar(conexao);
+            DALContasReceber DALobj = new DALContasReceber(conexao);
             DALobj.Incluir(obj);
         }
 
         public void Excluir(int codigo)
         {
-            DALContasPagar DALobj = new DALContasPagar(conexao);
+            DALContasReceber DALobj = new DALContasReceber(conexao);
             DALobj.Excluir(codigo);
         }
 
-        public void Alterar(ModeloContasPagar obj)
+        public void Alterar(ModeloContasReceber obj)
         {
             if (obj.CPDescricao.Trim().Length == 0)
             {
@@ -47,20 +47,20 @@ namespace BBL
             {
                 throw new Exception("Status é obrigatorio");
             } 
-            DALContasPagar DALobj = new DALContasPagar(conexao);
+            DALContasReceber DALobj = new DALContasReceber(conexao);
             DALobj.Alterar(obj);
         }
 
         public DataTable Localizar(String valor)
         {
-            DALContasPagar DALobj = new DALContasPagar(conexao);
+            DALContasReceber DALobj = new DALContasReceber(conexao);
             return DALobj.Localizar(valor);
         }
 
-        public ModeloContasPagar CarregaModeloContasPagar(int codigo)
+        public ModeloContasReceber CarregaModeloContasReceber(int codigo)
         {
-            DALContasPagar DALobj = new DALContasPagar(conexao);
-            return DALobj.CarregaModeloContasPagar(codigo);
+            DALContasReceber DALobj = new DALContasReceber(conexao);
+            return DALobj.CarregaModeloContasReceber(codigo);
         }
        
     }

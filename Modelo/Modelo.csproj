@@ -42,6 +42,7 @@
     <Compile Include="ModeloCliente.cs" />
     <Compile Include="ModeloCategoria.cs" />
     <Compile Include="ModeloCompra.cs" />
+    <Compile Include="ModeloContasReceber.cs" />
     <Compile Include="ModeloContasPagar.cs" />
     <Compile Include="ModeloFornecedor.cs" />
     <Compile Include="ModeloItemCompra.cs" />

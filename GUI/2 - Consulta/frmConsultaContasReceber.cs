@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmConsultaContasPagar : Form
+    public partial class frmConsultaContasReceber : Form
     {
         public int codigo = 0;
-        public frmConsultaContasPagar()
+        public frmConsultaContasReceber()
         {
             InitializeComponent();
         }
@@ -25,11 +25,11 @@ namespace GUI
         {
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
 
-            BBL.BLLContasPagar bll = new BBL.BLLContasPagar(cx);
+            BBL.BLLContasReceber bll = new BBL.BLLContasReceber(cx);
             dgvDados.DataSource = bll.Localizar(txtValor.Text);
         }
 
-        private void frmConsultaContasPagar_Load(object sender, EventArgs e)
+        private void frmConsultaContasReceber_Load(object sender, EventArgs e)
         {
             btnPesquizar_Click(sender, e);
             dgvDados.Columns[0].HeaderText = "Código";
@@ -56,7 +56,7 @@ namespace GUI
         private void txtValor_TextChanged(object sender, EventArgs e)
         {
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BBL.BLLContasPagar bll = new BBL.BLLContasPagar(cx);
+            BBL.BLLContasReceber bll = new BBL.BLLContasReceber(cx);
             dgvDados.DataSource = bll.Localizar(txtValor.Text);
         }
     }
