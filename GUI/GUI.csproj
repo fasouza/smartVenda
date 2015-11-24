@@ -59,6 +59,12 @@
     <Compile Include="1 - Cadastro\frmCadastroUsuario.Designer.cs">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="1 - Cadastro\frmCadastroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 - Cadastro\frmCadastroVenda.designer.cs">
+      <DependentUpon>frmCadastroVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="1 - Cadastro\frmContasReceber.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,12 +257,6 @@
       <DependentUpon>SubCategoria.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="1 - Cadastro\CadastroVenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="1 - Cadastro\CadastroVenda.Designer.cs">
-      <DependentUpon>CadastroVenda.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +273,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1 - Cadastro\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 - Cadastro\frmCadastroVenda.resx">
+      <DependentUpon>frmCadastroVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1 - Cadastro\frmContasReceber.resx">
       <DependentUpon>frmContasReceber.cs</DependentUpon>
@@ -373,9 +376,6 @@
     <EmbeddedResource Include="5 - Report\SubCategoria.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SubCategoria.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="1 - Cadastro\CadastroVenda.resx">
-      <DependentUpon>CadastroVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

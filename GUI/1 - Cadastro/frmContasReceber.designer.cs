@@ -40,12 +40,15 @@
             this.txtPagamento = new System.Windows.Forms.DateTimePicker();
             this.btnAddFor = new System.Windows.Forms.Button();
             this.cbCliente = new System.Windows.Forms.ComboBox();
+            this.dgvDados = new System.Windows.Forms.DataGridView();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
             // 
             // pnDados
             // 
+            this.pnDados.Controls.Add(this.dgvDados);
             this.pnDados.Controls.Add(this.btnAddFor);
             this.pnDados.Controls.Add(this.txtPagamento);
             this.pnDados.Controls.Add(this.cbCliente);
@@ -58,6 +61,11 @@
             this.pnDados.Controls.Add(this.lblVencimento);
             this.pnDados.Controls.Add(this.lblPagamento);
             this.pnDados.Controls.Add(this.txtCodigo);
+            this.pnDados.Size = new System.Drawing.Size(614, 511);
+            // 
+            // pnBotoes
+            // 
+            this.pnBotoes.Location = new System.Drawing.Point(11, 525);
             // 
             // btAlterar
             // 
@@ -85,7 +93,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(35, 27);
+            this.txtCodigo.Location = new System.Drawing.Point(18, 12);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(42, 20);
             this.txtCodigo.TabIndex = 5;
@@ -94,7 +102,7 @@
             // lblPagamento
             // 
             this.lblPagamento.AutoSize = true;
-            this.lblPagamento.Location = new System.Drawing.Point(282, 111);
+            this.lblPagamento.Location = new System.Drawing.Point(358, 115);
             this.lblPagamento.Name = "lblPagamento";
             this.lblPagamento.Size = new System.Drawing.Size(61, 13);
             this.lblPagamento.TabIndex = 10;
@@ -104,7 +112,7 @@
             // lblVencimento
             // 
             this.lblVencimento.AutoSize = true;
-            this.lblVencimento.Location = new System.Drawing.Point(32, 111);
+            this.lblVencimento.Location = new System.Drawing.Point(106, 115);
             this.lblVencimento.Name = "lblVencimento";
             this.lblVencimento.Size = new System.Drawing.Size(63, 13);
             this.lblVencimento.TabIndex = 11;
@@ -113,7 +121,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(336, 73);
+            this.txtValor.Location = new System.Drawing.Point(18, 131);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(78, 20);
             this.txtValor.TabIndex = 12;
@@ -122,7 +130,7 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(333, 57);
+            this.lblValor.Location = new System.Drawing.Point(15, 115);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(31, 13);
             this.lblValor.TabIndex = 13;
@@ -132,7 +140,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(32, 57);
+            this.lblCliente.Location = new System.Drawing.Point(15, 56);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 15;
@@ -145,7 +153,7 @@
             this.cbPago.Items.AddRange(new object[] {
             "Pago",
             "Pendente"});
-            this.cbPago.Location = new System.Drawing.Point(422, 73);
+            this.cbPago.Location = new System.Drawing.Point(498, 72);
             this.cbPago.Name = "cbPago";
             this.cbPago.Size = new System.Drawing.Size(98, 21);
             this.cbPago.TabIndex = 18;
@@ -153,7 +161,7 @@
             // lblPago
             // 
             this.lblPago.AutoSize = true;
-            this.lblPago.Location = new System.Drawing.Point(419, 56);
+            this.lblPago.Location = new System.Drawing.Point(495, 56);
             this.lblPago.Name = "lblPago";
             this.lblPago.Size = new System.Drawing.Size(37, 13);
             this.lblPago.TabIndex = 19;
@@ -162,21 +170,21 @@
             // 
             // txtVencimento
             // 
-            this.txtVencimento.Location = new System.Drawing.Point(35, 131);
+            this.txtVencimento.Location = new System.Drawing.Point(109, 131);
             this.txtVencimento.Name = "txtVencimento";
             this.txtVencimento.Size = new System.Drawing.Size(235, 20);
             this.txtVencimento.TabIndex = 20;
             // 
             // txtPagamento
             // 
-            this.txtPagamento.Location = new System.Drawing.Point(285, 131);
+            this.txtPagamento.Location = new System.Drawing.Point(361, 131);
             this.txtPagamento.Name = "txtPagamento";
             this.txtPagamento.Size = new System.Drawing.Size(235, 20);
             this.txtPagamento.TabIndex = 21;
             // 
             // btnAddFor
             // 
-            this.btnAddFor.Location = new System.Drawing.Point(302, 73);
+            this.btnAddFor.Location = new System.Drawing.Point(442, 70);
             this.btnAddFor.Name = "btnAddFor";
             this.btnAddFor.Size = new System.Drawing.Size(28, 23);
             this.btnAddFor.TabIndex = 24;
@@ -188,21 +196,36 @@
             // 
             this.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(35, 72);
+            this.cbCliente.Location = new System.Drawing.Point(18, 72);
             this.cbCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(262, 21);
+            this.cbCliente.Size = new System.Drawing.Size(419, 21);
             this.cbCliente.TabIndex = 23;
+            // 
+            // dgvDados
+            // 
+            this.dgvDados.AllowUserToAddRows = false;
+            this.dgvDados.AllowUserToDeleteRows = false;
+            this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDados.Location = new System.Drawing.Point(18, 170);
+            this.dgvDados.Name = "dgvDados";
+            this.dgvDados.ReadOnly = true;
+            this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDados.Size = new System.Drawing.Size(578, 329);
+            this.dgvDados.TabIndex = 25;
+            this.dgvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellContentClick);
             // 
             // frmContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(634, 461);
+            this.ClientSize = new System.Drawing.Size(634, 623);
             this.Name = "frmContasReceber";
             this.Text = "Cadastro de Contas a Receber";
+            this.Load += new System.EventHandler(this.frmContasReceber_Load);
             this.pnDados.ResumeLayout(false);
             this.pnDados.PerformLayout();
             this.pnBotoes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +244,6 @@
         private System.Windows.Forms.DateTimePicker txtVencimento;
         private System.Windows.Forms.Button btnAddFor;
         private System.Windows.Forms.ComboBox cbCliente;
+        private System.Windows.Forms.DataGridView dgvDados;
        }
 }

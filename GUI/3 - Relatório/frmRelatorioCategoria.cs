@@ -27,7 +27,7 @@ namespace GUI._3___Relatório
         private void frmRelatorioCategoria_Load(object sender, EventArgs e)
         {
             ReportDocument rb = new ReportDocument();
-            rb.Load(@"B:\smartVenda\GUI\5 - Report\Categoria.rpt");
+            rb.Load(@"C:\Users\fasou\Documents\GitHub\smartVenda\GUI\5 - Report\Categoria.rpt");
             crvCategoria.ReportSource = rb;
         }
              

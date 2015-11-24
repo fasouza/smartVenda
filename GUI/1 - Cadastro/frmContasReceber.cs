@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class frmContasReceber : GUI.frmModeloFormularioCadastro
     {
+        public int codigo = 0;
         public void LimpaTela()
         {
             txtValor.Clear();
@@ -23,11 +24,6 @@ namespace GUI
         public frmContasReceber()
         {
             InitializeComponent();
-            DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BLLCliente bll = new BLLCliente(cx);
-            cbCliente.DataSource = bll.Localizar("");
-            cbCliente.DisplayMember = "cli_nome";
-            cbCliente.ValueMember = "cli_cod";
         }
        
         private void btInserir_Click(object sender, EventArgs e)
@@ -82,16 +78,6 @@ namespace GUI
                 MessageBox.Show(erro.Message);
             }
         }
-        private void frmContasReceber_Load(object sender, EventArgs e)
-        {
-            this.alteraBotoes(1);
-            DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
-            BLLCliente bll = new BLLCliente(cx);
-            cbCliente.DataSource = bll.Localizar("");
-            cbCliente.DisplayMember = "cli_nome";
-            cbCliente.ValueMember = "cli_cod";
-      
-        }
 
         private void btLocalizar_Click(object sender, EventArgs e)
         {
@@ -104,11 +90,8 @@ namespace GUI
                 DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
                 BLLContasReceber bll = new BLLContasReceber(cx);
                 ModeloContasReceber modelo = bll.CarregaModeloContasReceber(f.codigo);
-
-
-                //txtCodigo.Text = modelo.CPCod.ToString();
-              //  txtDescricao.Text = modelo.CPDescricao;
-
+                txtCodigo.Text = modelo.CPCod.ToString();
+                cbCliente.SelectedValue = modelo.CPCliente;                
                 this.alteraBotoes(3);
             }
             else
@@ -158,6 +141,38 @@ namespace GUI
             cbCliente.DataSource = bll.Localizar("");
             cbCliente.DisplayMember = "cli_nome";
             cbCliente.ValueMember = "cli_cod";
+        }
+
+        private void dgvDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verifica se a linha é maior que zero
+            if (e.RowIndex >= 0)
+            {
+                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                this.Close();
+            }
+        }
+
+        private void frmContasReceber_Load(object sender, EventArgs e)
+        {
+            DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
+            BBL.BLLContasReceber bll = new BBL.BLLContasReceber(cx);
+            dgvDados.DataSource = bll.Localizar("");
+
+            dgvDados.Columns[0].HeaderText = "Código";
+            dgvDados.Columns[0].Width = 55;
+            dgvDados.Columns[1].HeaderText = "Vencimento";
+            dgvDados.Columns[1].Width = 200;
+            dgvDados.Columns[2].HeaderText = "Cliente";
+            dgvDados.Columns[2].Width = 200;
+            dgvDados.Columns[3].HeaderText = "Valor";
+            dgvDados.Columns[3].Width = 200;
+
+            BBL.BLLCliente bllCliente = new BBL.BLLCliente(cx);
+            cbCliente.DataSource = bllCliente.Localizar("");
+            cbCliente.DisplayMember = "cli_nome";
+            cbCliente.ValueMember = "cli_cod";
+
         }          
     }
 }

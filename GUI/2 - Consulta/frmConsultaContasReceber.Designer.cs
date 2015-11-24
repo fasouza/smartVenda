@@ -47,6 +47,7 @@
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDados.Size = new System.Drawing.Size(578, 395);
             this.dgvDados.TabIndex = 11;
+            this.dgvDados.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDados_CellMouseDoubleClick);
             // 
             // btnPesquizar
             // 
@@ -71,9 +72,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Produto";
+            this.label1.Text = "Cliente";
             // 
             // frmConsultaContasReceber
             // 
@@ -87,7 +88,7 @@
             this.Name = "frmConsultaContasReceber";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaContasReceber";
-//            this.Load += new System.EventHandler(this.frmConsultaContasReceber_Load);
+            this.Load += new System.EventHandler(this.frmConsultaContasReceber_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

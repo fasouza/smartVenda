@@ -67,11 +67,9 @@ namespace DAL
         public DataTable Localizar(String valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select areceber_cod, data_vencimento,cli_cod from conta_areceber where status !=  'pago' and descricao like '%" + valor + "%'  ", conexao.StringConexao);
+            SqlDataAdapter da = new SqlDataAdapter("Select cr.areceber_cod, cr.data_vencimento,c.cli_nome,cr.valor from conta_areceber cr left join cliente c on c.cli_cod = cr.cli_cod where c.cli_nome like  '%" + valor + "%'  and cr.status !=  'pago' ", conexao.StringConexao);
             da.Fill(tabela);
             return tabela;
-
-
         }
 
         public ModeloContasReceber CarregaModeloContasReceber(int codigo)
