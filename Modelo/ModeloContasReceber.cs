@@ -71,11 +71,5 @@ namespace Modelo
                 get { return this.CP_status; }
                 set { this.CP_status = value; }
             }
-            private String CP_descricao;
-            public String CPDescricao
-            {
-                get { return this.CP_descricao; }
-                set { this.CP_descricao = value; }
-            } 
     }
 }

@@ -19,10 +19,7 @@ namespace BBL
 
         public void Incluir(ModeloContasReceber obj)
         {
-            if (obj.CPDescricao.Trim().Length == 0)
-            {
-                throw new Exception("Descrição é obrigatorio");
-            }
+
             if (obj.CPStatus.Trim().Length == 0)
             {
                 throw new Exception("Status é obrigatorio");
@@ -39,10 +36,6 @@ namespace BBL
 
         public void Alterar(ModeloContasReceber obj)
         {
-            if (obj.CPDescricao.Trim().Length == 0)
-            {
-                throw new Exception("Descrição é obrigatorio");
-            }
             if (obj.CPStatus.Trim().Length == 0)
             {
                 throw new Exception("Status é obrigatorio");

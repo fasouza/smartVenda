@@ -49,6 +49,14 @@ namespace GUI
                 btExcluir.Enabled = true;
                 btCancelar.Enabled = true;
             }
+            if (op == 4)
+            {
+                pnDados.Enabled = true;
+                btInserir.Enabled = true;
+                btAlterar.Enabled = true;
+                btExcluir.Enabled = true;
+
+            }
         }
 
         private void frmModeloDeFormularioDeCadastro_Load(object sender, EventArgs e)

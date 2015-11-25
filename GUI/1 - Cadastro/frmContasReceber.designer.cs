@@ -34,13 +34,13 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.cbPago = new System.Windows.Forms.ComboBox();
             this.lblPago = new System.Windows.Forms.Label();
             this.txtVencimento = new System.Windows.Forms.DateTimePicker();
             this.txtPagamento = new System.Windows.Forms.DateTimePicker();
             this.btnAddFor = new System.Windows.Forms.Button();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.cbPago = new System.Windows.Forms.ComboBox();
             this.pnDados.SuspendLayout();
             this.pnBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -61,11 +61,11 @@
             this.pnDados.Controls.Add(this.lblVencimento);
             this.pnDados.Controls.Add(this.lblPagamento);
             this.pnDados.Controls.Add(this.txtCodigo);
-            this.pnDados.Size = new System.Drawing.Size(614, 511);
+            this.pnDados.Size = new System.Drawing.Size(614, 224);
             // 
             // pnBotoes
             // 
-            this.pnBotoes.Location = new System.Drawing.Point(11, 525);
+            this.pnBotoes.Location = new System.Drawing.Point(9, 255);
             // 
             // btAlterar
             // 
@@ -147,17 +147,6 @@
             this.lblCliente.Text = "Cliente";
             this.lblCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // cbPago
-            // 
-            this.cbPago.FormattingEnabled = true;
-            this.cbPago.Items.AddRange(new object[] {
-            "Pago",
-            "Pendente"});
-            this.cbPago.Location = new System.Drawing.Point(498, 72);
-            this.cbPago.Name = "cbPago";
-            this.cbPago.Size = new System.Drawing.Size(98, 21);
-            this.cbPago.TabIndex = 18;
-            // 
             // lblPago
             // 
             this.lblPago.AutoSize = true;
@@ -211,14 +200,26 @@
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.ReadOnly = true;
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDados.Size = new System.Drawing.Size(578, 329);
+            this.dgvDados.Size = new System.Drawing.Size(578, 17);
             this.dgvDados.TabIndex = 25;
-            this.dgvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellContentClick);
+            this.dgvDados.Visible = false;
+            this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
+            // 
+            // cbPago
+            // 
+            this.cbPago.FormattingEnabled = true;
+            this.cbPago.Items.AddRange(new object[] {
+            "Pago",
+            "Pendente"});
+            this.cbPago.Location = new System.Drawing.Point(498, 72);
+            this.cbPago.Name = "cbPago";
+            this.cbPago.Size = new System.Drawing.Size(98, 21);
+            this.cbPago.TabIndex = 18;
             // 
             // frmContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(634, 623);
+            this.ClientSize = new System.Drawing.Size(634, 351);
             this.Name = "frmContasReceber";
             this.Text = "Cadastro de Contas a Receber";
             this.Load += new System.EventHandler(this.frmContasReceber_Load);
@@ -239,11 +240,11 @@
         private System.Windows.Forms.Label lblPagamento;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblPago;
-        private System.Windows.Forms.ComboBox cbPago;
         private System.Windows.Forms.DateTimePicker txtPagamento;
         private System.Windows.Forms.DateTimePicker txtVencimento;
         private System.Windows.Forms.Button btnAddFor;
         private System.Windows.Forms.ComboBox cbCliente;
         private System.Windows.Forms.DataGridView dgvDados;
+        private System.Windows.Forms.ComboBox cbPago;
        }
 }

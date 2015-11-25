@@ -43,7 +43,6 @@ namespace GUI
         {
             try
             {
-               
                 //leitura dos dados
                 ModeloContasReceber modelo = new ModeloContasReceber();
                 modelo.CPVencimento = Convert.ToDateTime(txtVencimento.Text);
@@ -51,22 +50,19 @@ namespace GUI
                 modelo.CPStatus = cbPago.Text;
                 modelo.CPValor = Convert.ToDouble(txtValor.Text);
                 modelo.CPCliente = Convert.ToInt32(cbCliente.SelectedValue); 
-
                 //obj para gravar os dados no banco
                 DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
                 BLLContasReceber bll = new BLLContasReceber(cx);
-
                 if (this.operacao == "inserir")
                 {
                     //cadastrar uma categoria
                     bll.Incluir(modelo);
                     MessageBox.Show("Cadastro efetuado: Código: " + modelo.CPCod.ToString());
-
                 }
                 else
                 {
                     //alterar uma categoria
-                    //modelo.CPCod = Convert.ToInt32(txtCodigo.Text);
+                    modelo.CPCod = Convert.ToInt32(txtCodigo.Text);
                     bll.Alterar(modelo);
                     MessageBox.Show("Cadastro alterado");
                 }
@@ -91,7 +87,11 @@ namespace GUI
                 BLLContasReceber bll = new BLLContasReceber(cx);
                 ModeloContasReceber modelo = bll.CarregaModeloContasReceber(f.codigo);
                 txtCodigo.Text = modelo.CPCod.ToString();
-                cbCliente.SelectedValue = modelo.CPCliente;                
+                cbCliente.SelectedValue = modelo.CPCliente;
+                txtValor.Text = Convert.ToString(modelo.CPValor);
+                txtVencimento.Value = modelo.CPVencimento;
+                txtPagamento.Value = modelo.CPPagamento;
+                cbPago.Text = modelo.CPStatus;
                 this.alteraBotoes(3);
             }
             else
@@ -143,18 +143,9 @@ namespace GUI
             cbCliente.ValueMember = "cli_cod";
         }
 
-        private void dgvDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //verifica se a linha é maior que zero
-            if (e.RowIndex >= 0)
-            {
-                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
-                this.Close();
-            }
-        }
-
         private void frmContasReceber_Load(object sender, EventArgs e)
         {
+
             DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
             BBL.BLLContasReceber bll = new BBL.BLLContasReceber(cx);
             dgvDados.DataSource = bll.Localizar("");
@@ -172,7 +163,33 @@ namespace GUI
             cbCliente.DataSource = bllCliente.Localizar("");
             cbCliente.DisplayMember = "cli_nome";
             cbCliente.ValueMember = "cli_cod";
+         //   this.alteraBotoes(4);
 
-        }          
+
+        }
+
+        private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verifica se a linha é maior que zero
+            if (e.RowIndex >= 0)
+            {
+                this.codigo = Convert.ToInt32(dgvDados.Rows[e.RowIndex].Cells[0].Value);
+                DALConexao cx = new DALConexao(DadosConexao.StringDeConexao);
+                BLLContasReceber bll = new BLLContasReceber(cx);
+                ModeloContasReceber modelo = bll.CarregaModeloContasReceber(this.codigo);
+                txtCodigo.Text = modelo.CPCod.ToString();
+                cbCliente.Text = Convert.ToString(modelo.CPCliente);
+
+                this.alteraBotoes(3);
+            }
+        }
+
+     /*   private void dgvDados_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (dgvDados.SelectedRows.Count >= 0)
+            {
+                txtCodigo.Text = Convert.ToString(dgvDados.SelectedRows[0].Cells[0].Value);
+            }
+        }     */     
     }
 }

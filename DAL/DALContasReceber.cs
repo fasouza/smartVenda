@@ -56,6 +56,7 @@ namespace DAL
             cmd.CommandText = "UPDATE conta_areceber SET  data_vencimento = (@vencimento), data_pagamento = (@pagamento), status = (@status), valor =(@valor) where areceber_cod = (@codigo)";
 
             cmd.Parameters.AddWithValue("@vencimento", modelo.CPVencimento);
+            cmd.Parameters.AddWithValue("@codigo", modelo.CPCod);
             cmd.Parameters.AddWithValue("@pagamento", modelo.CPPagamento);
             cmd.Parameters.AddWithValue("@status", modelo.CPStatus);
             cmd.Parameters.AddWithValue("@valor", modelo.CPValor);
@@ -77,7 +78,7 @@ namespace DAL
             ModeloContasReceber modelo = new ModeloContasReceber();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from conta_areceber where cli_cod =" + codigo.ToString();
+            cmd.CommandText = "select * from conta_areceber where areceber_cod =" + codigo;
             cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
@@ -86,27 +87,31 @@ namespace DAL
                 registro.Read();
 
                 modelo.CPCod       = Convert.ToInt32(registro["areceber_cod"]);
-                modelo.CPDescricao      = Convert.ToString(registro["descricao"]);
+                modelo.CPCliente      = Convert.ToInt32(registro["cli_cod"]);
+                //modelo.CPPagamento = Convert.ToDateTime(registro["data_pagamento"]);
+                modelo.CPVencimento = Convert.ToDateTime(registro["data_vencimento"]);
+                modelo.CPStatus = Convert.ToString(registro["status"]);
+
+
             }
             conexao.Desconectar();
             return modelo;
         }
 
-        public ModeloContasReceber CarregaModeloContasReceber(String cpfcnpj)
+        public ModeloContasReceber CarregaModeloContasReceber(String codigo)
         {
             ModeloContasReceber modelo = new ModeloContasReceber();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "select * from conta_areceber where cli_cpfcnpj = @cpfcnpj";
-            cmd.Parameters.AddWithValue("@cpfcnpj", cpfcnpj);
+            cmd.CommandText = "select * from conta_areceber where areceber_cod = @codigo";
+            cmd.Parameters.AddWithValue("@codigo", codigo);
             conexao.Conectar();
             SqlDataReader registro = cmd.ExecuteReader();
             if (registro.HasRows)
             {
                 registro.Read();
                 modelo.CPCod = Convert.ToInt32(registro["areceber_cod"]);
-                modelo.CPDescricao = Convert.ToString(registro["descricao"]);
-            }
+             }
             conexao.Desconectar();
             return modelo;
         }
